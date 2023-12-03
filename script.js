@@ -160,15 +160,26 @@ function plazoFijoInteres () {
 
     const botonPF = document.getElementById("botonPF")
     botonPF.addEventListener("click", () => {
-        mainUser.dinero -= inputPF.value
-        const saldoActual = document.getElementById("dineroActual")
-        saldoActual.innerHTML = `<strong>Saldo actual:</strong> $${mainUser.dinero}`
 
-        Swal.fire({
-            title: "Acción exitosa",
-            text: `Has invertido en Banco Lagos`,
-            icon: "success"
-            });
+        if(mainUser.dinero >= inputPF.value) {
+            mainUser.dinero -= inputPF.value
+            const saldoActual = document.getElementById("dineroActual")
+            saldoActual.innerHTML = `<strong>Saldo actual:</strong> $${mainUser.dinero}`
+    
+            Swal.fire({
+                title: "Acción exitosa",
+                text: `Has invertido en Banco Lagos`,
+                icon: "success"
+                });
+        }
+        else {
+            Swal.fire({
+                title: "Fondos insuficientes",
+                text: `Ingrese un monto disponible`,
+                icon: "error"
+                });
+        }
+
     })
 }
 
