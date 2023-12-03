@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;500;700&family=Nunito:wght@200;500;800&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+}
+
+header {
+    display: flex;
+    background-color: rgb(255, 255, 14);
+    height: 200px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header #logo img {
+    height: 150px;
+    box-shadow: 2px 2px 25px -7px #4c4c4c;
+}
+header nav {
+    width: 50%;
+}
+header nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header nav ul li {
+    list-style-type: none;
+}
+header nav ul li a {
+    font-size: 20px;
+    color: black;
+}
+#LIB:hover {
+    box-shadow: 2px 2px 25px -7px #4c4c4c;
+    border-radius: 10px;
+}
+#LIB {
+    padding: 7px 25px;
+    background-color: black;
+    font-weight: 800 !important;
+    text-decoration: none;
+}
+h1 {
+    text-align: center;
+    margin: 50px !important;
+    font-weight: 800 !important;
+}
+
+footer {
+    background-color: rgb(255, 255, 14);
+    text-align: center;
+    margin-top: 20px;
+}
+footer div {
+    padding: 20px;
+}
+footer div p {
+    margin-top: 10px;
+}
+h2 {
+    margin-top: 90px !important;
+    margin-left: 3rem;
+}
+
+form input{
+    width: 80%;
+    margin-bottom: 20px;
+}
+#prestamos {
+    padding: 20px;
+}
+.cuotas {
+    display: flex;
+    justify-content: space-around;
+}
+.cuotas section {
+    display: flex;
+    flex-direction: column;
+}
+h3 {
+    padding: 25px 10px;
+    font-weight: 700;
+}
+form p {
+    font-size: 25px;
+}
+form h6{
+    color: gray;
+}
+form .maximo {
+    color: red;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#inputPF, #inputPF2 {
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+#carouselExample {
+    width: 30%;
+    margin: auto;
+}

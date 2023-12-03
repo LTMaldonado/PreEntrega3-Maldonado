@@ -3,18 +3,116 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Banco Lagos</title>
+    <link rel="stylesheet" href="./estilo.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   <body>
-    <h1 class="text-center m-5">Home Banking</h1>
+    <header>
+      <a id="logo" href="./index.html"><img src="./recursos/Logo.png" alt="logo"></a>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Inicio</a></li>
+          <!-- menu desplegable -->
+          <li>
+            <div class="dropdown">
+              <button class="btn btn-dark text-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Mis Tarjetas
+              </button>
+              <ul class="dropdown-menu">
+                <li><button class="dropdown-item" type="button">Crédito</button></li>
+                <li><button class="dropdown-item" type="button">Débito</button></li>
+                <li><button class="dropdown-item" type="button">Solicitar tarjeta/s</button></li>
+              </ul>
+            </div>
+          </li>
+          <!-- menu desplegable -->
+          <li>
+            <div class="dropdown">
+              <button class="btn btn-dark text-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Inversiones
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#prestamos" class="dropdown-item" type="button">Préstamos</a></li>
+                <li><a href="#plazoFijo" class="dropdown-item" type="button">Plazo Fijo</a></li>
+                <li><a href="#carouselExample" class="dropdown-item" type="button">Moneda extranjera</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a class="text-warning" id="LIB" href="#">BIL</a></li>
+        </ul>
+      </nav>
+    </header>
+    <H1 >BANCA INTERNET LAGOS</H1>
     <div class="container" id="user">
+      <!-- Acá se renderiza la card del perfil -->
     </div>
+    <div class="container"><h2>CONTACTOS</h2></div>
     <div class="container text-center">
-        <div class="row" id="contenedor">
+        <div class="row d-flex justify-content-between" id="contenedor">
+          <!-- Acá se renderizan los contactos -->
         </div>
     </div>
+    <div class="container" id="formulario">
+      <div class="card m-5" id="prestamos">
+        <h3><strong>PRÉSTAMOS</strong></h3>
+        <form>
+          <p>Monto a solicitar</p>
+          <h6 id="h6">Máx: $10.000.000</h6>
+          <input type="number" id= "inputNumero" value="" >
+          <input type="range" id="rango" name="rango" min="0" max="10000000" value="" step="1">
+      </form>
+      <p><strong>Pagarás:</strong></p>
+      <div class="cuotas" id="cuotasFijas">
+        <!-- Acá se renderiza la tabla de cuotas -->
+      </div>
+      <button class="btn btn-warning" id="botonPrestamo"> SOLICITAR</button>
+      </div>
+    </div>
+    <!-- Acá comienza la sección del plazo fijo -->
+    <div class="container" id="plazoFijo">
+      <div class="card m-5 p-3" id="divPF">
+        <h3><strong>PLAZO FIJO</strong></h3>
+        <label for="numer">Ingrese el monto a invertir:</label>
+        <input type="number" id="inputPF" value = "">
+        <label for="numer2">Ingrese el plazo (en meses)</label>
+        <input type="numer" id="inputPF2" value="12">
+        <section class="d-flex justify-content-around m-3" id="sectionPF">
+        </section>
+        <button class="btn btn-warning mx-5"  id="botonPF"> REALIZAR </button>
+      </div>
+    </div>
+  <!-- Acá comienza la sección de dólares -->
 
+  <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner" id="carrusel">
+      <div class="carousel-item active p-4 card">
+        <table class="table">
+          <tr> <th scope="col">Cotizacion del dólar (botones a los costados)</th> </tr>
+          <tr> <th>Precio de venta</th> </tr>
+          <tr> <th>Precio de compra</th> </tr>
+        </table>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next" id="botonCarrusel">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- footer -->
+    <footer>
+      <div>
+        <a href="#">Terminos y condiciones</a>
+        <p>BANCO LAGOS</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
